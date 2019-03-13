@@ -1,0 +1,9 @@
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\bin\Debug\netstandard2.0\HrothgarGame.Networking.deps.json
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\bin\Debug\netstandard2.0\HrothgarGame.Networking.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\bin\Debug\netstandard2.0\HrothgarGame.Networking.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.csprojAssemblyReference.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.csproj.CoreCompileInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.AssemblyInfoInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.AssemblyInfo.cs
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame.Networking\obj\Debug\netstandard2.0\HrothgarGame.Networking.pdb

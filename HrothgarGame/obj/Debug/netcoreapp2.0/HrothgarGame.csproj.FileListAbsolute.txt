@@ -1,0 +1,15 @@
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.deps.json
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.runtimeconfig.json
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.runtimeconfig.dev.json
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.csprojAssemblyReference.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.csproj.CoreCompileInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.AssemblyInfoInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.AssemblyInfo.cs
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\RedDot.xnb
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\RedDot.png
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\BlackBlock.xnb
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\BlackBlock.png
