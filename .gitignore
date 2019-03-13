@@ -1,1 +1,7 @@
 .vs/
+/HrothgarGame.Logic/bin
+/HrothgarGame.Logic/obj
+/HrothgarGame.Networking/bin
+/HrothgarGame.Networking/obj
+/HrothgarGame/obj
+/HrothgarGame/bin

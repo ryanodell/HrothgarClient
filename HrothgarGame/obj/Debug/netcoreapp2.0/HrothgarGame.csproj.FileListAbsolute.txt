@@ -13,3 +13,8 @@ C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\RedDot.xn
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\RedDot.png
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\BlackBlock.xnb
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\BlackBlock.png
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Logic.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Networking.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Logic.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Networking.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.csproj.CopyComplete

@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v2.0": {
       "HrothgarGame/1.0.0": {
         "dependencies": {
+          "HrothgarGame.Logic": "1.0.0",
+          "HrothgarGame.Networking": "1.0.0",
           "MonoGame.Content.Builder": "3.7.0.4",
           "MonoGame.Extended": "1.1.0",
           "MonoGame.Framework.DesktopGL.Core": "3.7.0.7"
@@ -414,6 +416,20 @@
           "System.Threading": "4.0.11",
           "System.Xml.ReaderWriter": "4.0.11"
         }
+      },
+      "HrothgarGame.Logic/1.0.0": {
+        "dependencies": {
+          "MonoGame.Extended": "1.1.0",
+          "MonoGame.Framework.DesktopGL.Core": "3.7.0.7"
+        },
+        "runtime": {
+          "HrothgarGame.Logic.dll": {}
+        }
+      },
+      "HrothgarGame.Networking/1.0.0": {
+        "runtime": {
+          "HrothgarGame.Networking.dll": {}
+        }
       }
     }
   },
@@ -688,6 +704,16 @@
       "sha512": "sha512-Mk2mKmPi0nWaoiYeotq1dgeNK1fqWh61+EK+w4Wu8SWuTYLzpUnschb59bJtGywaPq7SmTuPf44wrXRwbIrukg==",
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
+    },
+    "HrothgarGame.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HrothgarGame.Networking/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
