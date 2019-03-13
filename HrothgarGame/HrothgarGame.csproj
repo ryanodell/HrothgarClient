@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HrothgarGame.Logic\HrothgarGame.Logic.csproj" />
+    <ProjectReference Include="..\HrothgarGame.Networking\HrothgarGame.Networking.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Content\BlackBlock.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

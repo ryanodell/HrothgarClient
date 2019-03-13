@@ -7,7 +7,7 @@ namespace HrothgarGame
         [STAThread]
         static void Main()
         {
-            using (var game = new TmpGame())
+            using (var game = new MainGame())
                 game.Run();
         }
     }
