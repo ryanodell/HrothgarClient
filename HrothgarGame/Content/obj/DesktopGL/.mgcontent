@@ -6,5 +6,6 @@
   <SourceFiles>
     <File>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/RedDot.png</File>
     <File>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/BlackBlock.png</File>
+    <File>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/Fonts/MainFont.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

@@ -18,3 +18,4 @@ C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Netw
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Logic.pdb
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\HrothgarGame.Networking.pdb
 C:\Repos\HrothgarHomebrew\HrothgarGame\obj\Debug\netcoreapp2.0\HrothgarGame.csproj.CopyComplete
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\Fonts\MainFont.xnb

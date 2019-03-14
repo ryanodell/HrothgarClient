@@ -3,8 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Threading;
 using HrothgarGame.Networking;
 
 
@@ -17,17 +15,18 @@ namespace HrothgarGame
         SpriteBatch spriteBatch;
         Texture2D blackBlock;
         Texture2D redDot;
-        TcpClient tcpClient;
         Player player;
         List<Client> Clients = new List<Client>();
-
-        private static ManualResetEvent receiveDone = new ManualResetEvent(false);
+        SpriteFont font;
+        List<string> Chat = new List<string>();
+        string typeThing = string.Empty;
 
         public MainGame()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            graphics.IsFullScreen = false;
         }
 
         private void OnDataReceived(object obj, EventArgs args)
@@ -70,6 +69,10 @@ namespace HrothgarGame
                         }
                     }
                     break;
+                case "3":
+                    var contents = data[1];
+                    Chat.Add(contents);
+                    break;
                 default:
                     break;
             }
@@ -80,7 +83,23 @@ namespace HrothgarGame
             base.Initialize();
             networkClient = new NetworkClient("127.0.0.1", 23000);
             networkClient.Packet_Reader.OnReceiveData += OnDataReceived;
-            networkClient.Read();
+            await networkClient.Read();
+            Window.TextInput += TextInputeHandler;
+        }
+
+        private void TextInputeHandler(object sender, TextInputEventArgs args)
+        {
+            var pressedKey = args.Key;
+            var character = args.Character;
+            if(pressedKey == Keys.Back)
+            {
+                if (!string.IsNullOrEmpty(typeThing))
+                {
+                    typeThing = typeThing.TrimEnd(typeThing[typeThing.Length - 1]);
+                }
+                return;                
+            }
+            typeThing += character;
         }
 
         protected override void LoadContent()
@@ -88,6 +107,7 @@ namespace HrothgarGame
             spriteBatch = new SpriteBatch(GraphicsDevice);
             redDot = Content.Load<Texture2D>("RedDot");
             blackBlock = Content.Load<Texture2D>("BlackBlock");
+            font = Content.Load<SpriteFont>("Fonts/MainFont");
         }
 
         protected override void Update(GameTime gameTime)
@@ -137,6 +157,13 @@ namespace HrothgarGame
             {
                 spriteBatch.Draw(client.Texture, client.Position, Color.White);
             }
+            string chatText = string.Empty;
+            foreach(var item in Chat)
+            {
+                chatText += item + Environment.NewLine;
+            }
+            spriteBatch.DrawString(font, chatText, new Vector2(100, 100), Color.White);
+            spriteBatch.DrawString(font, typeThing, new Vector2(0, 200), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
