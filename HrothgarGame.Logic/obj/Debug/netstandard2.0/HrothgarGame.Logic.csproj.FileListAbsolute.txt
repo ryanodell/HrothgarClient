@@ -7,3 +7,6 @@ C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\bin\Debug\netstandard2.0\HrothgarGa
 C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\obj\Debug\netstandard2.0\HrothgarGame.Logic.csprojAssemblyReference.cache
 C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\obj\Debug\netstandard2.0\HrothgarGame.Logic.dll
 C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\obj\Debug\netstandard2.0\HrothgarGame.Logic.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\bin\Debug\netstandard2.0\HrothgarGame.Networking.dll
+C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\bin\Debug\netstandard2.0\HrothgarGame.Networking.pdb
+C:\Repos\HrothgarHomebrew\HrothgarGame.Logic\obj\Debug\netstandard2.0\HrothgarGame.Logic.csproj.CopyComplete

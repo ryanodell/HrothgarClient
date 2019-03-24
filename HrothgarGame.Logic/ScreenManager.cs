@@ -14,13 +14,18 @@ namespace HrothgarGame.Logic
                 if (instance == null)
                     instance = new ScreenManager();
                 return instance;
-            }
+            }                               
         }
 
         public void SetScreen(ScreenBase screen)
         {
             CurrentScreen = screen;
             CurrentScreen.LoadContent();
+        }
+
+        public void Initialize()
+        {
+
         }
 
         public ScreenManager() { }
@@ -35,9 +40,9 @@ namespace HrothgarGame.Logic
             CurrentScreen?.Update(gameTime);
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
-            CurrentScreen?.Draw(spriteBatch);
+            CurrentScreen?.Draw(spriteBatch, gameTime);
         }
     }
 }

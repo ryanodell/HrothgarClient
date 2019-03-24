@@ -22,7 +22,7 @@ namespace HrothgarGame.Networking
 
         public async Task Read()
         {
-            Task.Run(() =>Packet_Reader.ReadData());
+            await Task.Run(() => Packet_Reader.ReadData());
         }
 
         public void Write(string data)
