@@ -624,6 +624,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "HrothgarGame.Networking/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/HrothgarGame.Networking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HrothgarGame.Networking.dll": {}
+        }
       }
     }
   },
@@ -2882,10 +2892,16 @@
         "system.xml.xdocument.4.0.11.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "HrothgarGame.Networking/1.0.0": {
+      "type": "project",
+      "path": "../HrothgarGame.Networking/HrothgarGame.Networking.csproj",
+      "msbuildProject": "../HrothgarGame.Networking/HrothgarGame.Networking.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "HrothgarGame.Networking >= 1.0.0",
       "MonoGame.Extended >= 1.1.0",
       "MonoGame.Framework.DesktopGL.Core >= 3.7.0.7",
       "NETStandard.Library >= 2.0.3"
@@ -2920,7 +2936,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Repos\\HrothgarHomebrew\\HrothgarGame.Networking\\HrothgarGame.Networking.csproj": {
+              "projectPath": "C:\\Repos\\HrothgarHomebrew\\HrothgarGame.Networking\\HrothgarGame.Networking.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

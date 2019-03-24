@@ -7,7 +7,7 @@ namespace HrothgarGame.Networking
     public class PacketReader
     {
         private TcpClient _tcpClient;
-        public event EventHandler<EventArgs> OnReceiveData;
+        public event EventHandler<DatReceivedEventArgs> OnReceiveData;
 
         public PacketReader(TcpClient tcpClient)
         {
@@ -23,7 +23,12 @@ namespace HrothgarGame.Networking
                 while(true)
                 {
                     var bytesRead = await ns.ReadAsync(buffer, 0, buffer.Length);
-                    if (bytesRead == 0) return; // Stream was closed
+                    // Stream was closed
+                    if (bytesRead == 0)
+                    {
+                        Console.WriteLine("Stream has been closed");
+                        return;
+                    }
                     var readStr = Encoding.ASCII.GetString(buffer, 0, bytesRead);
                     OnReceiveData(this, new DatReceivedEventArgs(readStr));
                     //Console.WriteLine(readStr);

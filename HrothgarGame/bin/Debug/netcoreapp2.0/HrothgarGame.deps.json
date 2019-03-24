@@ -419,6 +419,7 @@
       },
       "HrothgarGame.Logic/1.0.0": {
         "dependencies": {
+          "HrothgarGame.Networking": "1.0.0",
           "MonoGame.Extended": "1.1.0",
           "MonoGame.Framework.DesktopGL.Core": "3.7.0.7"
         },

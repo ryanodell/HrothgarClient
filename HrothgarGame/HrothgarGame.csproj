@@ -27,10 +27,17 @@
     <None Update="Content\RedDot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Content\UI\GUI.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\UI\GUI0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\UI\" />
   </ItemGroup>
 
 </Project>

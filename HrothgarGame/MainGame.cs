@@ -4,16 +4,17 @@ using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using HrothgarGame.Networking;
-
+using HrothgarGame.Logic;
 
 namespace HrothgarGame
 {
     public class MainGame : Game
     {
+        NetworkManager networkManager = new NetworkManager();
         NetworkClient networkClient;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D blackBlock;
+        public Texture2D blackBlock;
         Texture2D redDot;
         Player player;
         List<Client> Clients = new List<Client>();
@@ -27,6 +28,8 @@ namespace HrothgarGame
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 600;
         }
 
         private void OnDataReceived(object obj, EventArgs args)
@@ -81,25 +84,11 @@ namespace HrothgarGame
         protected async override void Initialize()
         {
             base.Initialize();
-            networkClient = new NetworkClient("127.0.0.1", 23000);
-            networkClient.Packet_Reader.OnReceiveData += OnDataReceived;
-            await networkClient.Read();
-            Window.TextInput += TextInputeHandler;
-        }
-
-        private void TextInputeHandler(object sender, TextInputEventArgs args)
-        {
-            var pressedKey = args.Key;
-            var character = args.Character;
-            if(pressedKey == Keys.Back)
-            {
-                if (!string.IsNullOrEmpty(typeThing))
-                {
-                    typeThing = typeThing.TrimEnd(typeThing[typeThing.Length - 1]);
-                }
-                return;                
-            }
-            typeThing += character;
+            //networkClient = new NetworkClient("127.0.0.1", 23000);
+            //networkClient.Packet_Reader.OnReceiveData += OnDataReceived;
+            //await networkClient.Read();
+            Global.NetworkManager = networkManager;
+            Global.MainGame = this;
         }
 
         protected override void LoadContent()
@@ -108,34 +97,40 @@ namespace HrothgarGame
             redDot = Content.Load<Texture2D>("RedDot");
             blackBlock = Content.Load<Texture2D>("BlackBlock");
             font = Content.Load<SpriteFont>("Fonts/MainFont");
+            var pp = GraphicsDevice.PresentationParameters;
+            Global.Fonts.Add("SDS_6x6", Content.Load<SpriteFont>("Fonts/SDS_6x6"));
+            Global.Fonts.Add("SDS_8x8", Content.Load<SpriteFont>("Fonts/SDS_8x8"));
+            Global.Textures.Add("GUI", Content.Load<Texture2D>("UI/GUI"));
+
+            ScreenManager.Instance.SetScreen(new LoginScreen(GraphicsDevice, pp, Content, Window));
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            var ks = Keyboard.GetState();
-            if (ks.IsKeyDown(Keys.Right) || ks.IsKeyDown(Keys.Left) || ks.IsKeyDown(Keys.Up) || ks.IsKeyDown(Keys.Down))
-            {
-                if (ks.IsKeyDown(Keys.Right))
-                {
-                    player.Position.X += 5;
-                }
-                if (ks.IsKeyDown(Keys.Left))
-                {
-                    player.Position.X -= 5;
-                }
-                if (ks.IsKeyDown(Keys.Up))
-                {
-                    player.Position.Y -= 5;
-                }
-                if (ks.IsKeyDown(Keys.Down))
-                {
-                    player.Position.Y += 5;
-                }
-                Write(player.Position.ToString());
-            }
+            ScreenManager.Instance.Update(gameTime);
+            //var ks = Keyboard.GetState();
+            //if (ks.IsKeyDown(Keys.Right) || ks.IsKeyDown(Keys.Left) || ks.IsKeyDown(Keys.Up) || ks.IsKeyDown(Keys.Down))
+            //{
+            //    if (ks.IsKeyDown(Keys.Right))
+            //    {
+            //        player.Position.X += 5;
+            //    }
+            //    if (ks.IsKeyDown(Keys.Left))
+            //    {
+            //        player.Position.X -= 5;
+            //    }
+            //    if (ks.IsKeyDown(Keys.Up))
+            //    {
+            //        player.Position.Y -= 5;
+            //    }
+            //    if (ks.IsKeyDown(Keys.Down))
+            //    {
+            //        player.Position.Y += 5;
+            //    }
+            //    Write(player.Position.ToString());
+            //}
 
             base.Update(gameTime);
         }
@@ -148,23 +143,24 @@ namespace HrothgarGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin();
-            if (player != null)
-            {
-                spriteBatch.Draw(player.Texture, player.Position, Color.White);
-            }
-            foreach (var client in Clients)
-            {
-                spriteBatch.Draw(client.Texture, client.Position, Color.White);
-            }
-            string chatText = string.Empty;
-            foreach(var item in Chat)
-            {
-                chatText += item + Environment.NewLine;
-            }
-            spriteBatch.DrawString(font, chatText, new Vector2(100, 100), Color.White);
-            spriteBatch.DrawString(font, typeThing, new Vector2(0, 200), Color.White);
-            spriteBatch.End();
+            ScreenManager.Instance.Draw(spriteBatch, gameTime);
+            //spriteBatch.Begin();
+            //if (player != null)
+            //{
+            //    spriteBatch.Draw(player.Texture, player.Position, Color.White);
+            //}
+            //foreach (var client in Clients)
+            //{
+            //    spriteBatch.Draw(client.Texture, client.Position, Color.White);
+            //}
+            //string chatText = string.Empty;
+            //foreach (var item in Chat)
+            //{
+            //    chatText += item + Environment.NewLine;
+            //}
+            //spriteBatch.DrawString(font, chatText, new Vector2(100, 100), Color.White);
+            //spriteBatch.DrawString(font, typeThing, new Vector2(0, 200), Color.White);
+            //spriteBatch.End();
             base.Draw(gameTime);
         }
     }
