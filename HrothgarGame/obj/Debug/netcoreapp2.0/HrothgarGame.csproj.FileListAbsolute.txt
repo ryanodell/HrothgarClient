@@ -23,3 +23,5 @@ C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\UI\GUI.xn
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\Fonts\SDS_6x6.xnb
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\Fonts\SDS_8x8.xnb
 C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\UI\GUI.png
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\Images\Mine.xnb
+C:\Repos\HrothgarHomebrew\HrothgarGame\bin\Debug\netcoreapp2.0\Content\Images\Mine.png

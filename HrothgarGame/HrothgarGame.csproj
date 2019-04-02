@@ -24,6 +24,9 @@
     <None Update="Content\BlackBlock.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Content\Images\Mine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Content\RedDot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -37,6 +40,7 @@
 
   <ItemGroup>
     <Folder Include="Content\Fonts\" />
+    <Folder Include="Content\Images\" />
     <Folder Include="Content\UI\" />
   </ItemGroup>
 

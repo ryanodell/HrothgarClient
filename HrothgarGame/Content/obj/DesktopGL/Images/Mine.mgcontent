@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/RedDot.png</SourceFile>
-  <SourceTime>2018-08-18T17:03:23.1755198-07:00</SourceTime>
-  <DestFile>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/bin/DesktopGL/RedDot.xnb</DestFile>
-  <DestTime>2019-03-31T14:40:33.0531741-07:00</DestTime>
+  <SourceFile>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/Images/Mine.png</SourceFile>
+  <SourceTime>2019-03-31T14:38:08.2370327-07:00</SourceTime>
+  <DestFile>C:/Repos/HrothgarHomebrew/HrothgarGame/Content/bin/DesktopGL/Images/Mine.xnb</DestFile>
+  <DestTime>2019-03-31T14:40:34.0781655-07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T07:05:36-08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -1,0 +1,11 @@
+C:\Repos\HrothgarHomebrew\HrothgarConsole\bin\Debug\netcoreapp2.2\HrothgarConsole.deps.json
+C:\Repos\HrothgarHomebrew\HrothgarConsole\bin\Debug\netcoreapp2.2\HrothgarConsole.runtimeconfig.json
+C:\Repos\HrothgarHomebrew\HrothgarConsole\bin\Debug\netcoreapp2.2\HrothgarConsole.runtimeconfig.dev.json
+C:\Repos\HrothgarHomebrew\HrothgarConsole\bin\Debug\netcoreapp2.2\HrothgarConsole.dll
+C:\Repos\HrothgarHomebrew\HrothgarConsole\bin\Debug\netcoreapp2.2\HrothgarConsole.pdb
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.csprojAssemblyReference.cache
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.csproj.CoreCompileInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.AssemblyInfoInputs.cache
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.AssemblyInfo.cs
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.dll
+C:\Repos\HrothgarHomebrew\HrothgarConsole\obj\Debug\netcoreapp2.2\HrothgarConsole.pdb

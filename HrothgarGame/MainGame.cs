@@ -101,6 +101,7 @@ namespace HrothgarGame
             Global.Fonts.Add("SDS_6x6", Content.Load<SpriteFont>("Fonts/SDS_6x6"));
             Global.Fonts.Add("SDS_8x8", Content.Load<SpriteFont>("Fonts/SDS_8x8"));
             Global.Textures.Add("GUI", Content.Load<Texture2D>("UI/GUI"));
+            Global.Textures.Add("Mine", Content.Load<Texture2D>("Images/Mine"));
 
             ScreenManager.Instance.SetScreen(new LoginScreen(GraphicsDevice, pp, Content, Window));
         }

@@ -13,13 +13,16 @@ namespace HrothgarGame.Logic
 {
     public class LoginScreen : ScreenBase
     {
-        private List<Control> Controls = new List<Control>();        
+        private List<Control> Controls = new List<Control>();
+        Camera2D backgroundCam;
 
         public LoginScreen(GraphicsDevice graphicsDevice, PresentationParameters presentationParameters, 
             ContentManager content, GameWindow gameWindow) : base(graphicsDevice, presentationParameters, content)
         {
             _initializeCamera();
             gameWindow.TextInput += TextInputeHandler;
+            backgroundCam = new Camera2D(graphicsDevice);
+            backgroundCam.Zoom = 3.5f;
         }
 
         private void TextInputeHandler(object sender, TextInputEventArgs args)
@@ -124,7 +127,11 @@ namespace HrothgarGame.Logic
 
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)
         {
+            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, backgroundCam.GetViewMatrix());
+            spriteBatch.Draw(Global.Textures["Mine"], new Vector2(250, 150), Color.White);
+            spriteBatch.End();
             spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, Camera.GetViewMatrix());
+            
             foreach (var control in Controls)
             {
                 control.Draw(spriteBatch);
